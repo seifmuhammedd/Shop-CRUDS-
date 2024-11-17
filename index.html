@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container py-">
+        <input type="search" class="form-control w-50 my-3 mx-auto border-5" placeholder="Search..." id="searchField"
+            oninput="search()">
+        <div class="inputs">
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="productName" placeholder="Product Name"
+                    oninput="validation(productName)">
+                <label for="productName">Product Name</label>
+                <p class="alert alert-danger my-2 d-none" id="nameAlert">Please enter a word that starts with a capital letter and is followed by 3
+                    to 15 characters, which can be letters, numbers, or underscores. The whole word should be between 4
+                    and 16 characters long.</p>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="number" class="form-control" id="productPrice" placeholder="Product Price" oninput="validation(productPrice)">
+                <label for="productPrice">Product Price</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input list="category" type="text" class="form-control" id="productCategory"
+                    placeholder="Product Category" oninput="validation(productCategory)">
+                <label for="productCategory">Product Category</label>
+                <datalist id="category">
+                    <option value="TV">
+                    <option value="Mobile">
+                    <option value="Laptops">
+                    <option value="Clothes">
+                </datalist>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="file" class="form-control" id="productImage" placeholder="Product Image" oninput="validation(productImage)">
+                <label for="productImage">Product Image</label>
+            </div>
+            <div class="form-floating mb-3">
+                <textarea class="form-control" id="productDescription" placeholder="Product Description" oninput="validation(productDescription)"></textarea>
+                <label for="productDescription">Product Description</label>
+            </div>
+            <button class="btn btn-info" onclick="addProducts()" id="addBtn">Add Product</button>
+            <button class="btn btn-warning d-none" onclick="updateProduct()" id="updateBtn">Update Product</button>
+        </div>
+        <div class="row mt-5 g-3 text-center" id="data">
+
+        </div>
+    </div>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
