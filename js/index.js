@@ -53,7 +53,7 @@ function displayProducts (arr) {
         holder += `
          <div class="col-md-3">
                 <div class="card">
-                    <img src="${arr[i].image}" alt="phone img" class="w-100  rounded-5">
+                    <img src="${arr[i].image}" alt="phone img" class="w-100  rounded-5 h-50">
                     <div class="card-body text-start">
                         <h2 class="h4">${arr[i].name}</h2>
                         <h3 class="h6">Price : <span>${arr[i].price}</span></h3>
